@@ -40,7 +40,7 @@ public class TioForTwitter {
         Twitter twitter = tf.getInstance();
         JSONObject obj = new JSONObject();
         int counterTweet = 0;
-        FileWriter file = new FileWriter("/Users/Satria/Documents/file1.txt");
+        FileWriter file = new FileWriter("Users\\user\\IdeaProjects\\TwitterStringMatching\\input.txt");
         file.flush();        
         try {
             Query query = new Query("Satria");
