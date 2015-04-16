@@ -73,17 +73,18 @@ public class BM {
     }
 
 
-
     // test client
-    public static void main(String[] args) {
-        String pat = "abc";
-        String txt = "aabbccabcbabc";
-        char[] pattern = pat.toCharArray();
-        char[] text    = txt.toCharArray();
+    /*public static void main(String[] args) {
+        String pat = "abcd";
+        String txt = "ABC";
+        String patlow = new String(pat.toLowerCase());
+        String txtlow = new String(txt.toLowerCase());
+        char[] pattern = patlow.toCharArray();
+        char[] text    = txtlow.toCharArray();
 
-        BM boyermoore1 = new BM(pat);
+        BM boyermoore1 = new BM(patlow);
         BM boyermoore2 = new BM(pattern, 256);
-        int offset1 = boyermoore1.search(txt);
+        int offset1 = boyermoore1.search(txtlow);
         int offset2 = boyermoore2.search(text);
 
         // print results
@@ -93,10 +94,11 @@ public class BM {
         for (int i = 0; i < offset1; i++)
             System.out.print(" ");
         System.out.println(pat);
-
+        System.out.println(offset1);
         System.out.print("pattern: ");
         for (int i = 0; i < offset2; i++)
             System.out.print(" ");
         System.out.println(pat);
-    }
+        System.out.println(offset2);
+    }*/
 }

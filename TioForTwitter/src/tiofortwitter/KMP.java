@@ -74,14 +74,16 @@ public class KMP {
 
 
     // test client
-    public static void main(String[] args) {
+    /*public static void main(String[] args) {
         String pat = "abc";
-        String txt = "aabbccabcbabc";
-        char[] pattern = pat.toCharArray();
-        char[] text    = txt.toCharArray();
+        String txt = "ABABACBABC";
+        String patlow = new String(pat.toLowerCase());
+        String txtlow = new String(txt.toLowerCase());
+        char[] pattern = patlow.toCharArray();
+        char[] text    = txtlow.toCharArray();
 
-        KMP kmp1 = new KMP(pat);
-        int offset1 = kmp1.search(txt);
+        KMP kmp1 = new KMP(patlow);
+        int offset1 = kmp1.search(txtlow);
 
         KMP kmp2 = new KMP(pattern, 256);
         int offset2 = kmp2.search(text);
@@ -98,5 +100,5 @@ public class KMP {
         for (int i = 0; i < offset2; i++)
             System.out.print(" ");
         System.out.println(pat);
-    }
+    }*/
 }
