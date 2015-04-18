@@ -4,7 +4,7 @@
 <head><!-- START HEAD -->
   <meta charset="utf-8">
   <!-- START TITLE -->
-  <title>TWIZZERS : Find your everyday fun</title>
+  <title>TWIZZERS : Merubah semua jadi nyata</title>
   <!-- END TITLE -->
 
   <!-- START META, DESCRIPTION, KEYWORDS, AUTHOR -->
@@ -122,29 +122,76 @@
     <div class="center-fix">
       
     <h1 class="underline animated fadeInDown">TWIZZERS</h1>
-    <h4 class="animated fadeInUp delay-05s" style="margin-bottom: 50px;"><strong class="blue">Twitter Analyzers</strong> <strong class="green">Find your everyday fun</strong></h4>
+    <h4 class="animated fadeInUp delay-05s" ><strong class="blue">Twitter Analyzers</strong> <strong class="green">Merubah semua jadi nyata</strong></h4>
     <!-- form untuk submit masuk -->
         <form id="searchForm" method="get" action="" target="results">
             <fieldset>
-                Topik : <input id="s" type="text" value="#twizzers" name="keyword" />
-                    
-                    <div style="position:relative;left:130px;">
-                        <input type="text" name="K1" value="Kategori 1" /> : <input type="text" name="ValK1" value="ganteng - ganteng" />
-                    </div>
-                    <div style="position:relative;left:130px;">
-                        <input type="text" name="K2" value="Kategori 2" /> : <input type="text" name="ValK2" value="sering-galau" />
-                    </div>
-                    <!-- radio button untuk mode KMP atau BoyerMoore -->
-                    <div style="position:relative;display:inline">
-                      <input type="radio" id="searchKMP" name="mode" value="KMP" checked /> 
-                    </div> 
-                    <div style="position:relative;display:inline">
-                      <label for="searchKMP" id="siteNameLabel">KMP</label>
-                    </div>
-                      <input type="radio" id = "searchBM" name="mode" value="BM" /> <label for="searchBM">BoyerMoore</label>
-                    </div>
+      
+      
+          
+                Topik :&nbsp; <input id="s" type="text" placeholder="#twizzers" name="keyword" />
+                    <div style="position:center;">
+              &nbsp;
+          </div>
+          
 
-                <input type="submit" value="Submit" id="submitButton" />
+          <script>
+            function addNQuery() {
+              if ($n_query<5)
+                $n_query++;
+              cetak();
+            }
+            
+            function removeNQuery() {
+              if ($n_query>2)
+                $n_query--;
+              cetak();
+            }
+            
+            $n_query=2;
+            
+            function cetak() {
+              var s="";
+              
+              for (i=0;i<$n_query;i++) {
+                var stringInt = i.toString();
+                
+                s+= '<input type="text" name="K'+stringInt+'" placeholder="Kategori '+(i+1)+'"> :&nbsp; <input type="text" name="ValK'+stringInt+'" placeholder="Keyword '+(i+1)+'"><br>'; //Create textboxes as HTML
+              }
+              document.getElementById("kategori").innerHTML = s;
+            }
+            
+          </script>
+          
+          <p id="kategori" style="position:center;">
+            <script>
+              cetak();
+            </script>
+          </p>
+          
+          <div style='position:center;'>
+              <button name='addq' type=button onclick='addNQuery()'   >Add</button>
+              <button name='rmvq' type=button onclick='removeNQuery()'>Remove</button>
+          
+          </div>
+          
+          
+          
+          <div style="position:center;">
+              &nbsp;
+          </div>
+                    <!-- radio button untuk mode KMP atau BoyerMoore -->
+          
+                    <div style="position:center;">
+                      <input type="radio" id="searchKMP" name="mode" value="KMP" checked >    <b>KMP&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b>
+                      <input type="radio" id="searchBM" name="mode" value="BM" >        <b>BoyerMoore</b>
+                    </div>
+          <div style="position:center;">
+              &nbsp;
+          </div>
+        
+        
+                <input type="submit" value="Analyze!" id="submitButton">
             </fieldset>
         </form>
     
@@ -173,61 +220,7 @@
 
             <h2 class="underline">OUR CORE <span class="green">FUNCTIONS</span></h2>
 
-            <p><strong>Features</strong> we are proud lorem ipsum meta data of our company</p>
-
-          </div>
-
-          <div class="w-col w-col-4 wp1">
-
-            <div class="icon-box">
-
-              <i class="cupelegance-icons-"></i>
-
-              <h4 class="icons-heading">CLEAN DESIGN</h4>
-
-              <p>
-
-               Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec.
-
-              </p>
-
-            </div>
-
-          </div>
-
-          <div class="w-col w-col-4 wp1 delay-05s">
-
-            <div class="icon-box">
-
-              <i class="paramselegance-icons-"></i>
-
-              <h4 class="icons-heading">FAST SUPPORT</h4>
-
-              <p>
-
-               Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec.
-
-              </p>
-
-            </div>
-
-          </div>
-
-          <div class="w-col w-col-4 wp1 delay-1s">
-
-            <div class="icon-box">
-
-              <i class="thumbs-upelegance-icons-"></i>
-
-              <h4 class="icons-heading">100% RESPONSIVE</h4>
-
-              <p>
-
-               Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec.
-
-              </p>
-
-            </div>
+            <p><strong>Results</strong> we are proud to present you</p>
 
           </div>
 
@@ -259,9 +252,9 @@
         <div class="center">
           <h2>our TEAM</h2>
           <p>A proud group of <strong class="green">team member</strong> who came together to help you find your everyday fun</p>
-          <video style="width: 100%; height: 400px; " autoplay loop poster="tio.jpg" >
+          <!-- <video style="width: 100%; height: 400px; " autoplay loop poster="tio.jpg" >
             <source src="VeloxVideo.mp4" type="video/mp4">
-          </video>
+          </video> -->
         </div>
         <div class="center w-col w-col-4 wp4">
           <div class="team-album">
@@ -342,7 +335,7 @@
         </div>
         <div class="w-col w-col-4">
           <div class="center">
-            <div class="circule circule-info"><p class="info"><strong class="info-strong">TWIZZERS</strong><br/>Find your everyday fun<br/></p></div>
+            <div class="circule circule-info"><p class="info"><strong class="info-strong">TWIZZERS</strong><br/>Merubah semua jadi nyata<br/></p></div>
           </div>
         </div>
         <div class="w-col w-col-4">
