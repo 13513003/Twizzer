@@ -124,62 +124,30 @@
     <h1 class="underline animated fadeInDown">TWIZZERS</h1>
     <h4 class="animated fadeInUp delay-05s" ><strong class="blue">Twitter Analyzers</strong> <strong class="green">Merubah semua jadi nyata</strong></h4>
     <!-- form untuk submit masuk -->
+    <div id="HeaderTemplate"></div>
         <form id="searchForm" method="get" action="" target="results">
             <fieldset>
-      
-      
-          
+              
                 Topik :&nbsp; <input id="s" type="text" placeholder="#twizzers" name="keyword" />
                     <div style="position:center;">
-              &nbsp;
+              <!--&nbsp;-->
           </div>
           
-
-          <script>
-            function addNQuery() {
-              if ($n_query<5)
-                $n_query++;
-              cetak();
-            }
-            
-            function removeNQuery() {
-              if ($n_query>2)
-                $n_query--;
-              cetak();
-            }
-            
-            $n_query=2;
-            
-            function cetak() {
-              var s="";
-              
-              for (i=0;i<$n_query;i++) {
-                var stringInt = i.toString();
-                
-                s+= '<input type="text" name="K'+stringInt+'" placeholder="Kategori '+(i+1)+'"> :&nbsp; <input type="text" name="ValK'+stringInt+'" placeholder="Keyword '+(i+1)+'"><br>'; //Create textboxes as HTML
-              }
-              document.getElementById("kategori").innerHTML = s;
-            }
-            
-          </script>
-          
-          <p id="kategori" style="position:center;">
-            <script>
-              cetak();
-            </script>
-          </p>
-          
+          <!-- Membuat button topik template-->
           <div style='position:center;'>
-              <button name='addq' type=button onclick='addNQuery()'   >Add</button>
-              <button name='rmvq' type=button onclick='removeNQuery()'>Remove</button>
-          
+              <button name='TemplateSport' type=button onclick='GantiTopikTemplateSport()'   >Sport</button>
+              <button name='TemplateOtomotif' type=button onclick='GantiTopikTemplateOtomotif()'>Otomotif</button>
+              <button name='TemplateEntertainment' type=button onclick='GantiTopikTemplateEntertainment()'>Entertainment</button>
+              <button name='TemplatePolitikHukum' type=button onclick='GantiTopikTemplatePolitikHukum()'>Politik dan Hukum</button>
+              <button name='Free' type=button onclick='FreeTopic()'>FreeTopic</button>
           </div>
+          <p id="kategori" style="position:center;" >
+            <script src ="js/form.js"></script>
+          </p >
           
+          <button name='addq' type=button onclick='addNQuery()'   >Add</button>
+          <button name='rmvq' type=button onclick='removeNQuery()'>Remove</button>
           
-          
-          <div style="position:center;">
-              &nbsp;
-          </div>
                     <!-- radio button untuk mode KMP atau BoyerMoore -->
           
                     <div style="position:center;">
