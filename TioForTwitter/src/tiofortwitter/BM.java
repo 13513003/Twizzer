@@ -72,31 +72,4 @@ public class BM {
         return N;                       // not found
     }
 
-
-
-    // test client
-    public static void main(String[] args) {
-        String pat = "abc";
-        String txt = "aabbccabcbabc";
-        char[] pattern = pat.toCharArray();
-        char[] text    = txt.toCharArray();
-
-        BM boyermoore1 = new BM(pat);
-        BM boyermoore2 = new BM(pattern, 256);
-        int offset1 = boyermoore1.search(txt);
-        int offset2 = boyermoore2.search(text);
-
-        // print results
-        System.out.println("text:    " + txt);
-
-        System.out.print("pattern: ");
-        for (int i = 0; i < offset1; i++)
-            System.out.print(" ");
-        System.out.println(pat);
-
-        System.out.print("pattern: ");
-        for (int i = 0; i < offset2; i++)
-            System.out.print(" ");
-        System.out.println(pat);
-    }
 }
